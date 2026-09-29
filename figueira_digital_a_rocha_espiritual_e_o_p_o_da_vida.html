@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Rocha Espiritual e o Pão da Vida — Figueira Digital</title>
+
+    <!-- Google Fonts: Cormorant Garamond (Serif), Inter (Sans), Cinzel (Engraved Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        walnut: {
+                            950: '#140c07',
+                            900: '#1e130b',
+                            800: '#2c1c11',
+                            700: '#422a1a',
+                            600: '#5c3a23',
+                            500: '#7a4e2f',
+                        },
+                        gold: {
+                            100: '#fcf6df',
+                            200: '#f6e7b2',
+                            300: '#edd88e',
+                            400: '#e0c25b',
+                            500: '#d4af37',
+                            600: '#b88e24',
+                            700: '#946d16',
+                        },
+                        papyrus: {
+                            50: '#fcfbf7',
+                            100: '#f7f4ea',
+                            200: '#ece5d4',
+                            300: '#ded2b7',
+                            800: '#3a3123',
+                            900: '#231d14',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Golden metallic text gradient */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFE6A2 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-engraved {
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: inset 0 0 12px rgba(212, 175, 55, 0.08);
+        }
+
+        .walnut-texture {
+            background-color: #1e130b;
+            background-image: radial-gradient(#2c1c11 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+
+        /* Reading document paper style */
+        .papyrus-sheet {
+            background-color: #fdfbf7;
+            background-image: linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 0%, transparent 100%);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Drop cap styling */
+        .drop-cap::first-letter {
+            font-family: 'Cinzel', serif;
+            font-size: 3.6rem;
+            line-height: 0.8;
+            float: left;
+            margin-right: 0.6rem;
+            margin-top: 0.2rem;
+            color: #b88e24;
+            font-weight: 700;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #140c07;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #422a1a;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        /* Print optimization */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+            header, footer, .no-print {
+                display: none !important;
+            }
+            .papyrus-sheet {
+                box-shadow: none !important;
+                border: none !important;
+                background: #ffffff !important;
+                padding: 0 !important;
+            }
+            .text-gray-200, .text-gray-300, .text-gray-400 {
+                color: #000000 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-walnut-950 text-gray-200 font-sans antialiased min-h-screen flex flex-col selection:bg-gold-500 selection:text-walnut-950">
+
+    <header class="sticky top-0 z-40 bg-walnut-900/95 backdrop-blur-md border-b border-gold-500/20 shadow-lg no-print">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo & Title -->
+            <a href="../index.html" class="flex items-center space-x-3 group" title="Voltar à página inicial">
+                <div class="w-11 h-11 rounded-full bg-walnut-800 p-1.5 border border-gold-500/40 group-hover:border-gold-500 transition-colors duration-300 flex items-center justify-center shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gold-500 fill-current">
+                        <defs>
+                            <linearGradient id="goldGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFE082" />
+                                <stop offset="50%" stop-color="#D4AF37" />
+                                <stop offset="100%" stop-color="#8C630D" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 88 C48 70 42 62 38 52 C35 44 38 35 45 32 C47 28 53 28 55 32 C62 35 65 44 62 52 C58 62 52 70 50 88 Z" fill="url(#goldGradNav)" />
+                        <path d="M40 50 C28 48 20 40 18 28 C26 26 36 32 40 42 Z" fill="url(#goldGradNav)" opacity="0.9" />
+                        <path d="M35 62 C22 62 14 52 12 40 C22 40 30 48 35 56 Z" fill="url(#goldGradNav)" opacity="0.85" />
+                        <path d="M60 50 C72 48 80 40 82 28 C74 26 64 32 60 42 Z" fill="url(#goldGradNav)" opacity="0.9" />
+                        <path d="M65 62 C78 62 86 52 88 40 C78 40 70 48 65 56 Z" fill="url(#goldGradNav)" opacity="0.85" />
+                        <path d="M50 32 C42 20 45 10 50 6 C55 10 58 20 50 32 Z" fill="url(#goldGradNav)" />
+                        <circle cx="36" cy="46" r="3.5" fill="#FFE6A2" />
+                        <circle cx="64" cy="46" r="3.5" fill="#FFE6A2" />
+                        <circle cx="50" cy="40" r="4" fill="#FFE6A2" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text block leading-tight">
+                        FIGUEIRA DIGITAL
+                    </span>
+                    <span class="text-[10px] sm:text-xs tracking-[0.2em] text-gold-400/80 font-medium uppercase block">
+                        Fé • História • Vida
+                    </span>
+                </div>
+            </a>
+
+            <!-- Navigation Controls -->
+            <div class="flex items-center space-x-3">
+                <a href="../index.html#artigos" class="hidden sm:inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold text-gold-300 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 transition-all">
+                    <i data-lucide="arrow-left" class="w-3.5 h-3.5 mr-1.5"></i>
+                    Todos os Artigos
+                </a>
+                <button onclick="window.print()" class="p-2 rounded-lg text-gold-400 hover:bg-walnut-800 border border-gold-500/20 hover:border-gold-500/50 transition-all" title="Imprimir ou Salvar em PDF">
+                    <i data-lucide="printer" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative py-12 lg:py-16 overflow-hidden border-b border-gold-500/20 walnut-texture no-print">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            
+            <!-- Category Tag -->
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-walnut-900 border border-gold-500/40 text-xs text-gold-300 uppercase tracking-widest font-mono mb-4">
+                <i data-lucide="compass" class="w-3.5 h-3.5 text-gold-400"></i>
+                <span>Série Raízes • Teologia Dogmática &amp; Eucarística</span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight gold-gradient-text mb-4 leading-tight">
+                A Rocha Espiritual e o Pão da Vida
+            </h1>
+
+            <p class="font-serif text-lg sm:text-2xl text-papyrus-200 italic max-w-3xl mx-auto font-medium mb-6">
+                Análise da Fundamentação Eucarística e a Crítica à Idolatria
+            </p>
+
+            <!-- Metadata Box -->
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-gold-400/80 border-t border-b border-gold-500/20 py-3 max-w-2xl mx-auto">
+                <span class="flex items-center font-medium text-papyrus-100">
+                    <i data-lucide="user-check" class="w-3.5 h-3.5 mr-1.5 text-gold-400"></i>
+                    K.F. Souza (Pesquisador e Analista)
+                </span>
+                <span class="hidden sm:inline text-gold-500/40">•</span>
+                <span class="flex items-center">
+                    <i data-lucide="scroll" class="w-3.5 h-3.5 mr-1.5 text-gold-400"></i>
+                    Estudo Teológico &amp; Síntese Doutrinária
+                </span>
+                <span class="hidden sm:inline text-gold-500/40">•</span>
+                <span class="flex items-center">
+                    <i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5 text-gold-400"></i>
+                    Leitura Completa
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-4xl w-full mx-auto px-3 sm:px-6 py-8 sm:py-12">
+        
+        <!-- Text Size Toolbar (Floating on desktop, top of sheet) -->
+        <div class="flex items-center justify-between bg-walnut-900/80 border border-gold-500/30 rounded-xl px-4 py-2.5 mb-6 text-xs text-gold-300 no-print backdrop-blur-sm">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="book-open" class="w-4 h-4 text-gold-400"></i>
+                <span class="font-serif italic font-semibold text-papyrus-100">Texto Integral Autorizado</span>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <span class="text-[11px] text-gray-400 uppercase tracking-wider hidden sm:inline">Ajustar Fonte:</span>
+                <button onclick="changeFontSize(-1)" class="px-2.5 py-1 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 rounded font-mono text-sm font-bold transition-colors" title="Diminuir fonte">A-</button>
+                <button onclick="resetFontSize()" class="px-2.5 py-1 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 rounded font-mono text-xs transition-colors" title="Tamanho padrão">Reset</button>
+                <button onclick="changeFontSize(1)" class="px-2.5 py-1 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 rounded font-mono text-sm font-bold transition-colors" title="Aumentar fonte">A+</button>
+            </div>
+        </div>
+
+        <!-- Papyrus Document Body -->
+        <article id="article-content" class="papyrus-sheet rounded-2xl p-6 sm:p-12 md:p-16 text-papyrus-900 font-serif leading-relaxed text-lg sm:text-xl border border-gold-500/30 relative overflow-hidden transition-all duration-200">
+            
+            <!-- Engraved Golden Header Crest inside page -->
+            <div class="text-center mb-10 pb-8 border-b-2 border-gold-500/20">
+                <span class="font-display tracking-[0.25em] text-xs uppercase text-gold-700 block mb-2 font-bold">
+                    Estudo Teológico e Síntese Doutrinária
+                </span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-walnut-950 uppercase tracking-wide leading-tight">
+                    A Rocha Espiritual e o Pão da Vida
+                </h2>
+                <p class="font-serif text-sm sm:text-base italic text-walnut-700 mt-2 font-medium">
+                    Análise da Fundamentação Eucarística e a Crítica à Idolatria
+                </p>
+            </div>
+
+            <div class="bg-papyrus-100 border-l-4 border-gold-600 p-5 sm:p-6 rounded-r-xl mb-10 shadow-sm">
+                <h3 class="font-display text-xs uppercase tracking-widest text-gold-700 font-bold mb-2 flex items-center">
+                    <i data-lucide="bookmark" class="w-3.5 h-3.5 mr-1.5"></i>
+                    Resumo Teológico
+                </h3>
+                <p class="text-base sm:text-lg italic text-walnut-800 leading-relaxed">
+                    O presente documento apresenta uma síntese teológico-católica acerca do duplo mistério de Cristo como Rocha Espiritual inabalável e Pão da Vida descendido dos céus. Analisa-se a indissociável união entre a Mesa da Palavra e a Mesa da Eucaristia, a crítica teológica à idolatria compreendida como o 'fundar-se na terra' e a radical incompatibilidade entre o culto ao verdadeiro Deus e a adesão aos ídolos do mundo.
+                </p>
+            </div>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    1. Introdução: Cristo, a Rocha Espiritual que se Faz Alimento
+                </h3>
+                <p class="drop-cap mb-4">
+                    Nas Sagradas Escrituras, Cristo Jesus é revelado como a pedra angular e o fundamento solidíssimo sobre o qual toda a vida espiritual e a estrutura da Igreja devem ser edificadas (Is 28, 16; Ef 2, 20). O Apóstolo São Paulo utiliza uma metáfora de altíssima densidade tipológica ao recordar a peregrinação do povo de Israel pelo deserto: <em>"todos beberam da mesma bebida espiritual; porque bebiam da pedra espiritual que os seguia; e esta pedra era Cristo"</em> (1Cor 10, 4).
+                </p>
+                <p>
+                    Contudo, no mistério da Economia da Salvação, essa Rocha inabalável não permanece como um bloco estático ou inacessível. Na Encarnação e na Redenção, a Rocha viva Se condescende e Se entrega à humanidade sob a forma de Pão do Céu (Jo 6, 35-51). O Deus eterno, forte e imutável faz-Se frágil e alimento substancial para entrar no mais íntimo do ser humano, sustentando a alma na travessia deste mundo.
+                </p>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    2. A Dupla Mesa: A Palavra de Deus e a Eucaristia
+                </h3>
+                <p class="mb-4">
+                    Fundar a existência na Rocha significa alimentar-se continuamente de Cristo. A Doutrina Católica e o Concílio Vaticano II (<em>Dei Verbum</em>, n. 21) ensinam que a Igreja venera as Sagradas Escrituras da mesma forma que o próprio Corpo do Senhor, oferecendo aos fiéis o Pão da Vida em uma única celebração mediante duas mesas indissociáveis: a Mesa da Palavra de Deus e a Mesa da Eucaristia.
+                </p>
+
+                <!-- Bullet point list -->
+                <div class="space-y-4 my-6 pl-2 sm:pl-4">
+                    <div class="bg-papyrus-100/80 p-4 sm:p-5 rounded-xl border border-papyrus-200">
+                        <h4 class="font-bold text-lg text-walnut-950 font-serif flex items-center mb-1">
+                            <i data-lucide="book-open-check" class="w-5 h-5 mr-2 text-gold-600 flex-shrink-0"></i>
+                            O Pão da Palavra
+                        </h4>
+                        <p class="text-base sm:text-lg text-walnut-800">
+                            Quem ouve as palavras de Cristo e as põe em prática é <em>"semelhante ao homem sábio que edificou a sua casa sobre a rocha"</em> (Mt 7, 24), permanecendo inabalável diante das tempestades e tribulações da história.
+                        </p>
+                    </div>
+
+                    <div class="bg-papyrus-100/80 p-4 sm:p-5 rounded-xl border border-papyrus-200">
+                        <h4 class="font-bold text-lg text-walnut-950 font-serif flex items-center mb-1">
+                            <i data-lucide="flame" class="w-5 h-5 mr-2 text-gold-600 flex-shrink-0"></i>
+                            O Pão Eucarístico
+                        </h4>
+                        <p class="text-base sm:text-lg text-walnut-800">
+                            Ao comungar do Pão partido no altar, o fiel participa de forma real, verdadeira e substancial do próprio Corpo, Sangue, Alma e Divindade de Nosso Senhor (Catecismo da Igreja Católica, n. 1374), tornando-se um só corpo e um só espírito com Ele. Participar da Comunhão é o ato supremo de fincar os alicerces da existência na Rocha Eterna.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    3. 'Fundar-se na Terra': A Essência da Idolatria
+                </h3>
+                <p class="mb-4">
+                    Em viva contraposição àqueles que edificam sobre a Rocha, o Santo Evangelho adverte sobre o homem insensato que constrói a sua casa <em>"sobre a terra sem fundamentos"</em> ou <em>"sobre a areia"</em> (Mt 7, 26; Lc 6, 49). Sob a perspectiva exegética e teológico-moral, fundar-se na terra constitui a essência exata da idolatria.
+                </p>
+                <p>
+                    O Livro da Sabedoria desmascara a loucura do homem que toma o barro da terra para moldar um deus, pando a sua esperança e segurança em uma coisa morta e frágil (Sb 15, 7-8). A idolatria consiste precisamente em divinizar o terreno — sejam riquezas, poder, prestígio, prazeres sensíveis ou as próprias paixões humanas, colocando o coração na criatura em vez de no Criador (Rm 1, 25). Quem se edifica sobre a terra constrói sobre uma estrutura efêmera que inevitavelmente desmorona e reduz tudo a ruínas perante as tempestades da vida e a hora da morte.
+                </p>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    4. A Incompatibilidade Fundamental das Duas Mesas
+                </h3>
+                <p class="mb-4">
+                    São Paulo formula essa oposição radical com clareza cristalina na Primeira Epístola aos Coríntios:
+                </p>
+                
+                <!-- Scripture Quote Box -->
+                <blockquote class="my-6 p-6 bg-walnut-900 text-papyrus-100 rounded-xl border border-gold-500/40 relative font-serif text-lg sm:text-xl italic shadow-md">
+                    <i data-lucide="quote" class="w-8 h-8 text-gold-500/20 absolute top-3 right-3"></i>
+                    "O cálice de bênção, que abençoamos, não é a comunhão do sangue de Cristo? E o pão que partimos não é a participação do corpo do Senhor? [...] Não podeis beber o cálice do Senhor e o cálice dos demônios; não podeis ser participantes da mesa do Senhor e da mesa dos demônios."
+                    <cite class="block text-right font-sans not-italic text-xs text-gold-300 uppercase tracking-widest mt-3 font-semibold">
+                        — 1Cor 10, 16.21
+                    </cite>
+                </blockquote>
+
+                <p>
+                    A teologia católica atesta a impossibilidade moral de conciliar a vida fundada na Rocha com a busca de alimento espiritual e segurança nos ídolos terrenos. Não se pode pretender a comunhão com o Pão Vivo do Céu enquanto o coração permanece escravizado pelos falsos deuses da terra.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    5. Conclusão Teológica e Síntese Sensível
+                </h3>
+
+                <!-- Highlight Box for Synthesis -->
+                <div class="my-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-gold-100 via-papyrus-100 to-papyrus-200 border-2 border-gold-500/50 shadow-md">
+                    <span class="font-display text-xs uppercase tracking-[0.2em] font-bold text-gold-700 block mb-3">
+                        Síntese da Conclusão Teológica
+                    </span>
+                    <p class="font-serif text-xl sm:text-2xl font-bold text-walnut-950 italic leading-relaxed">
+                        "Cristo é a Rocha Eterna que Se fez Pão para habitar em nós. Quando nos aproximamos da mesa da Sua Palavra e da Sua Eucaristia, fincamos as raízes da nossa alma no único fundamento inabalável da eternidade. Por outro lado, quando buscamos a nossa felicidade e segurança nas coisas passageiras do mundo, edificamos sobre a terra e a areia, caindo na ilusão da idolatria que tudo reduz a ruínas."
+                    </p>
+                </div>
+            </section>
+
+            <div class="border-t-2 border-gold-500/30 pt-8 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4 bg-papyrus-100/60 p-6 rounded-xl">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-full bg-walnut-900 border-2 border-gold-500 flex items-center justify-center text-gold-400 font-display font-bold text-xl shadow-md">
+                        KF
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-xl text-walnut-950">K.F. Souza</h4>
+                        <p class="text-xs font-sans text-walnut-700 font-medium">Pesquisador e Analista de Teologia Católica</p>
+                    </div>
+                </div>
+                
+                <button onclick="copyCitation()" class="no-print text-xs font-sans font-semibold text-walnut-900 hover:text-gold-700 bg-papyrus-200 hover:bg-papyrus-300 px-4 py-2.5 rounded-lg border border-papyrus-300 transition-colors flex items-center shadow-sm">
+                    <i data-lucide="copy" class="w-3.5 h-3.5 mr-1.5"></i>
+                    Copiar Citação ABNT
+                </button>
+            </div>
+
+            <section class="border-t border-papyrus-300 pt-8">
+                <h3 class="font-display text-sm uppercase tracking-[0.2em] font-bold text-gold-700 mb-4 flex items-center">
+                    <i data-lucide="library" class="w-4 h-4 mr-2"></i>
+                    Referências Bibliográficas e Fontes Doutrinárias
+                </h3>
+
+                <ul class="space-y-3 font-sans text-sm text-walnut-800 list-disc list-inside leading-relaxed">
+                    <li>
+                        <strong>BÍBLIA SAGRADA.</strong> Traduzida da Vulgata e comentada pelo Pe. Matos Soares. Edições Paulinas/Tipografia do Porto.
+                    </li>
+                    <li>
+                        <strong>CATECISMO DA IGREJA CATÓLICA.</strong> Edição Típica do Vaticano. Edições Loyola, 2000 (nn. 1374, 1381, 2112-2114).
+                    </li>
+                    <li>
+                        <strong>CONCÍLIO VATICANO II.</strong> Constituição Dogmática <em>Dei Verbum</em> sobre a Revelação Divina (n. 21).
+                    </li>
+                    <li>
+                        <strong>SÃO TOMÁS DE AQUINO.</strong> <em>Suma Teológica</em> (III Pars, qq. 73-79: Do Sacramento da Eucaristia; I-II, q. 102: Dos Preceitos Cerimoniais).
+                    </li>
+                    <li>
+                        <strong>SANTO AGOSTINHO.</strong> <em>In Ioannis Evangelium Tractatus</em> (Tratados sobre o Evangelho de São João, 26); <em>De Civitate Dei</em> (A Cidade de Deus, Livro X).
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gold-300 no-print px-2">
+            <a href="../index.html#artigos" class="flex items-center text-gold-400 hover:text-gold-200 transition-colors font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>
+                Voltar para o Repositório de Artigos
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center hover:text-gold-100 transition-colors">
+                    <i data-lucide="arrow-up" class="w-4 h-4 mr-1"></i>
+                    Voltar ao Topo
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-walnut-900 border-t border-gold-500/20 py-12 mt-auto no-print">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-full bg-walnut-800 p-1 border border-gold-500/30 flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gold-500 fill-current">
+                        <use href="#goldGradNav"></use>
+                        <path d="M50 85 C48 65 40 55 35 45 C30 35 38 25 45 23 C48 18 52 18 55 23 C62 25 70 35 65 45 C60 55 52 65 50 85 Z" fill="url(#goldGradNav)"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-gold-400 block text-sm">FIGUEIRA DIGITAL</span>
+                    <span class="text-[10px] text-gray-500">Cultura, Teologia &amp; Oração</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-400 text-center md:text-right max-w-md leading-relaxed">
+                "Cava a terra e lança o adubo." — Projeto autoral voltado para a difusão da Teologia Católica e da espiritualidade clássica na era digital.
+            </p>
+
+        </div>
+    </footer>
+
+    <script>
+        // Interactive font resizing
+        let currentSizeLevel = 0;
+        const fontClasses = ['text-lg', 'text-xl', 'text-2xl'];
+        
+        function changeFontSize(delta) {
+            const article = document.getElementById('article-content');
+            if (!article) return;
+
+            currentSizeLevel += delta;
+            if (currentSizeLevel < -1) currentSizeLevel = -1;
+            if (currentSizeLevel > 2) currentSizeLevel = 2;
+
+            // Remove existing text scale overrides
+            article.classList.remove('text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl');
+
+            if (currentSizeLevel === -1) {
+                article.classList.add('text-base');
+            } else if (currentSizeLevel === 0) {
+                article.classList.add('text-lg', 'sm:text-xl');
+            } else if (currentSizeLevel === 1) {
+                article.classList.add('text-xl', 'sm:text-2xl');
+            } else if (currentSizeLevel === 2) {
+                article.classList.add('text-2xl', 'sm:text-3xl');
+            }
+        }
+
+        function resetFontSize() {
+            currentSizeLevel = 0;
+            const article = document.getElementById('article-content');
+            if (article) {
+                article.classList.remove('text-base', 'text-xl', 'text-2xl', 'text-3xl');
+                article.classList.add('text-lg', 'sm:text-xl');
+            }
+        }
+
+        // Copy ABNT citation to clipboard
+        function copyCitation() {
+            const citationText = "SOUZA, K. F. A Rocha Espiritual e o Pão da Vida: Análise da Fundamentação Eucarística e a Crítica à Idolatria. Estudo Teológico e Síntese Doutrinária. Figueira Digital: Série Raízes, 2026.";
+            
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = citationText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            // Subtle user notification message box
+            const btn = event.currentTarget;
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 mr-1.5 text-green-700"></i> Copiado com Sucesso!`;
+            if (window.lucide) lucide.createIcons();
+
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                if (window.lucide) lucide.createIcons();
+            }, 3000);
+        }
+
+        // Initialize Lucide icons on load
+        window.onload = function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        };
+    </script>
+</body>
+</html>

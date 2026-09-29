@@ -505,10 +505,12 @@
                     <!-- Footer Action -->
                     <div class="px-6 py-4 bg-walnut-950/50 border-t border-gold-500/10 flex items-center justify-between">
                         <span class="text-[11px] text-gray-500">${article.date}</span>
-                        <button onclick="openModal(${article.id})" class="text-xs font-semibold text-gold-400 hover:text-gold-300 flex items-center transition-colors">
-                            Ler Artigo
-                            <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform"></i>
-                        </button>
+                        <a href="${article.filepath}"
+  class="text-xs font-semibold text-gold-400 hover:text-gold-300 flex items-center transition-colors">
+    Ler Artigo
+    <i data-lucide="arrow-right"
+      class="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform"></i>
+</a>
                     </div>
                 </article>
             `).join('');

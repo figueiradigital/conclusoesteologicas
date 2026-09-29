@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Anatomia Espiritual da Ira e o Homicídio do Coração — Figueira Digital</title>
+
+    <!-- Google Fonts: Cormorant Garamond (Serif), Inter (Sans), Cinzel (Engraved Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        walnut: {
+                            950: '#140c07',
+                            900: '#1e130b',
+                            800: '#2c1c11',
+                            700: '#422a1a',
+                            600: '#5c3a23',
+                            500: '#7a4e2f',
+                        },
+                        gold: {
+                            100: '#fcf6df',
+                            200: '#f6e7b2',
+                            300: '#edd88e',
+                            400: '#e0c25b',
+                            500: '#d4af37',
+                            600: '#b88e24',
+                            700: '#946d16',
+                        },
+                        papyrus: {
+                            50: '#fcfbf7',
+                            100: '#f7f4ea',
+                            200: '#ece5d4',
+                            300: '#ded2b7',
+                            800: '#3a3123',
+                            900: '#231d14',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Golden metallic text gradient */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFE6A2 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-engraved {
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: inset 0 0 12px rgba(212, 175, 55, 0.08);
+        }
+
+        .walnut-texture {
+            background-color: #1e130b;
+            background-image: radial-gradient(#2c1c11 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+
+        /* Reading document paper style */
+        .papyrus-sheet {
+            background-color: #fdfbf7;
+            background-image: linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 0%, transparent 100%);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Drop cap styling */
+        .drop-cap::first-letter {
+            font-family: 'Cinzel', serif;
+            font-size: 3.6rem;
+            line-height: 0.8;
+            float: left;
+            margin-right: 0.6rem;
+            margin-top: 0.2rem;
+            color: #b88e24;
+            font-weight: 700;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #140c07;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #422a1a;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        /* Print optimization */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+            header, footer, .no-print {
+                display: none !important;
+            }
+            .papyrus-sheet {
+                box-shadow: none !important;
+                border: none !important;
+                background: #ffffff !important;
+                padding: 0 !important;
+            }
+            .text-gray-200, .text-gray-300, .text-gray-400 {
+                color: #000000 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-walnut-950 text-gray-200 font-sans antialiased min-h-screen flex flex-col selection:bg-gold-500 selection:text-walnut-950">
+
+    <header class="sticky top-0 z-40 bg-walnut-900/95 backdrop-blur-md border-b border-gold-500/20 shadow-lg no-print">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo & Title -->
+            <a href="../index.html" class="flex items-center space-x-3 group" title="Voltar à página inicial">
+                <div class="w-11 h-11 rounded-full bg-walnut-800 p-1.5 border border-gold-500/40 group-hover:border-gold-500 transition-colors duration-300 flex items-center justify-center shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gold-500 fill-current">
+                        <defs>
+                            <linearGradient id="goldGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFE082" />
+                                <stop offset="50%" stop-color="#D4AF37" />
+                                <stop offset="100%" stop-color="#8C630D" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 88 C48 70 42 62 38 52 C35 44 38 35 45 32 C47 28 53 28 55 32 C62 35 65 44 62 52 C58 62 52 70 50 88 Z" fill="url(#goldGradNav)" />
+                        <path d="M40 50 C28 48 20 40 18 28 C26 26 36 32 40 42 Z" fill="url(#goldGradNav)" opacity="0.9" />
+                        <path d="M35 62 C22 62 14 52 12 40 C22 40 30 48 35 56 Z" fill="url(#goldGradNav)" opacity="0.85" />
+                        <path d="M60 50 C72 48 80 40 82 28 C74 26 64 32 60 42 Z" fill="url(#goldGradNav)" opacity="0.9" />
+                        <path d="M65 62 C78 62 86 52 88 40 C78 40 70 48 65 56 Z" fill="url(#goldGradNav)" opacity="0.85" />
+                        <path d="M50 32 C42 20 45 10 50 6 C55 10 58 20 50 32 Z" fill="url(#goldGradNav)" />
+                        <circle cx="36" cy="46" r="3.5" fill="#FFE6A2" />
+                        <circle cx="64" cy="46" r="3.5" fill="#FFE6A2" />
+                        <circle cx="50" cy="40" r="4" fill="#FFE6A2" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text block leading-tight">
+                        FIGUEIRA DIGITAL
+                    </span>
+                    <span class="text-[10px] sm:text-xs tracking-[0.2em] text-gold-400/80 font-medium uppercase block">
+                        Fé • História • Vida
+                    </span>
+                </div>
+            </a>
+
+            <!-- Navigation Controls -->
+            <div class="flex items-center space-x-3">
+                <a href="../index.html#artigos" class="hidden sm:inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold text-gold-300 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 transition-all">
+                    <i data-lucide="arrow-left" class="w-3.5 h-3.5 mr-1.5"></i>
+                    Todos os Artigos
+                </a>
+                <button onclick="window.print()" class="p-2 rounded-lg text-gold-400 hover:bg-walnut-800 border border-gold-500/20 hover:border-gold-500/50 transition-all" title="Imprimir ou Salvar em PDF">
+                    <i data-lucide="printer" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative py-12 lg:py-16 overflow-hidden border-b border-gold-500/20 walnut-texture no-print">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            
+            <!-- Category Tag -->
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-walnut-900 border border-gold-500/40 text-xs text-gold-300 uppercase tracking-widest font-mono mb-4">
+                <i data-lucide="compass" class="w-3.5 h-3.5 text-gold-400"></i>
+                <span>Série Raízes • Teologia Moral &amp; Exegética</span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight gold-gradient-text mb-4 leading-tight">
+                A Anatomia Espiritual da Ira e o Homicídio do Coração
+            </h1>
+
+            <p class="font-serif text-lg sm:text-2xl text-papyrus-200 italic max-w-3xl mx-auto font-medium mb-6">
+                Análise Exegética e Teológico-Moral à Luz do Sermão da Montanha e da Tradição Católica
+            </p>
+
+            <!-- Metadata Box -->
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-gold-400/80 border-t border-b border-gold-500/20 py-3 max-w-2xl mx-auto">
+                <span class="flex items-center font-medium text-papyrus-100">
+                    <i data-lucide="user-check" class="w-3.5 h-3.5 mr-1.5 text-gold-400"></i>
+                    K.F. Souza (Pesquisador e Analista)
+                </span>
+                <span class="hidden sm:inline text-gold-500/40">•</span>
+                <span class="flex items-center">
+                    <i data-lucide="scroll" class="w-3.5 h-3.5 mr-1.5 text-gold-400"></i>
+                    Estudo Teológico &amp; Síntese Doutrinária
+                </span>
+                <span class="hidden sm:inline text-gold-500/40">•</span>
+                <span class="flex items-center">
+                    <i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5 text-gold-400"></i>
+                    Leitura Completa
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-4xl w-full mx-auto px-3 sm:px-6 py-8 sm:py-12">
+        
+        <!-- Text Size Toolbar (Floating on desktop, top of sheet) -->
+        <div class="flex items-center justify-between bg-walnut-900/80 border border-gold-500/30 rounded-xl px-4 py-2.5 mb-6 text-xs text-gold-300 no-print backdrop-blur-sm">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="book-open" class="w-4 h-4 text-gold-400"></i>
+                <span class="font-serif italic font-semibold text-papyrus-100">Texto Integral Autorizado</span>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <span class="text-[11px] text-gray-400 uppercase tracking-wider hidden sm:inline">Ajustar Fonte:</span>
+                <button onclick="changeFontSize(-1)" class="px-2.5 py-1 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 rounded font-mono text-sm font-bold transition-colors" title="Diminuir fonte">A-</button>
+                <button onclick="resetFontSize()" class="px-2.5 py-1 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 rounded font-mono text-xs transition-colors" title="Tamanho padrão">Reset</button>
+                <button onclick="changeFontSize(1)" class="px-2.5 py-1 bg-walnut-800 hover:bg-walnut-700 border border-gold-500/30 rounded font-mono text-sm font-bold transition-colors" title="Aumentar fonte">A+</button>
+            </div>
+        </div>
+
+        <!-- Papyrus Document Body -->
+        <article id="article-content" class="papyrus-sheet rounded-2xl p-6 sm:p-12 md:p-16 text-papyrus-900 font-serif leading-relaxed text-lg sm:text-xl border border-gold-500/30 relative overflow-hidden transition-all duration-200">
+            
+            <!-- Engraved Golden Header Crest inside page -->
+            <div class="text-center mb-10 pb-8 border-b-2 border-gold-500/20">
+                <span class="font-display tracking-[0.25em] text-xs uppercase text-gold-700 block mb-2 font-bold">
+                    Estudo Teológico e Síntese Doutrinária
+                </span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-walnut-950 uppercase tracking-wide leading-tight">
+                    A Anatomia Espiritual da Ira e o Homicídio do Coração
+                </h2>
+                <p class="font-serif text-sm sm:text-base italic text-walnut-700 mt-2 font-medium">
+                    Análise Exegética e Teológico-Moral à Luz do Sermão da Montanha e da Tradição Católica
+                </p>
+            </div>
+
+            <div class="bg-papyrus-100 border-l-4 border-gold-600 p-5 sm:p-6 rounded-r-xl mb-10 shadow-sm">
+                <h3 class="font-display text-xs uppercase tracking-widest text-gold-700 font-bold mb-2 flex items-center">
+                    <i data-lucide="bookmark" class="w-3.5 h-3.5 mr-1.5"></i>
+                    Resumo Teológico
+                </h3>
+                <p class="text-base sm:text-lg italic text-walnut-800 leading-relaxed">
+                    O presente documento apresenta uma síntese teológico-moral católico-sistemática acerca do pecado da ira e de suas ramificações espirituais, com especial enfoque na doutrina do 'homicídio do coração' revelada por Nosso Senhor Jesus Cristo no Sermão da Montanha (Mt 5, 21-22). Analisa-se a ilusão da falsa justiça sob a qual a ira se disfarça, a usurpação do tribunal divino, a autodestruição da alma irada e a superação evangélica através da caridade, do perdão e da graça de Cristo.
+                </p>
+            </div>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    1. Introdução: A Falsa Justiça e o Engano do Homem Irado
+                </h3>
+                <p class="drop-cap mb-4">
+                    A reflexão teológica sobre a moral evangélica revela que a ira constitui um dos vícios mais dissimulados da alma humana. Raramente o homem se entrega à paixão da ira reconhecendo a sua própria perversidade; pelo contrário, a ira necessita vestir-se com a túnica da 'indignação justa' ou do 'zelo pela verdade' para se justificar perante a consciência. O erro fundamental do homem irado reside em confundir a justiça divina — cujo fim é a conversão, a restauração e a salvação da alma — com o desejo egoísta de vingança e a aniquilação do próximo.
+                </p>
+                <p>
+                    Como adverte expressamente o Apóstolo São Tiago: <em>"A ira do homem não cumpre a justiça de Deus"</em> (Tg 1, 20). Quando o orante se deixa dominar pela cólera, a pretensa busca por justiça degrada-se em soberba, orgulho e imposição da própria vontade sobre a lei do amor.
+                </p>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    2. A Usurpação do Tribunal Divino
+                </h3>
+                <p class="mb-4">
+                    Ao julgar interiormente o seu irmão e decretar contra ele uma sentença de desprezo, o homem irado comete um ato de usurpação da autoridade divina. A doutrina católica reitera que a vida e a dignidade de cada pessoa pertencem exclusivamente a Deus (Catecismo da Igreja Católica, n. 2258). Sentar-se no tribunal do coração para decidir quem 'merece' respeito ou descarte equivale a colocar-se no lugar do Supremo Legislador e Juiz.
+                </p>
+                <p>
+                    A Sagrada Escritura atesta que <em>"Deus não fez a morte, nem Se alegra com a perdição dos vivos"</em> (Sb 1, 13; Ez 18, 32). Enquanto o olhar do Criador sobre a criação é um olhar comunicador de vida e de misericórdia, o olhar do homem tomado pela ira projeta a rejeição, despojando o irmão da sua dignidade espiritual e existencial.
+                </p>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    3. O Homicídio Interior no Sermão da Montanha (Mateus 5, 21-22)
+                </h3>
+                <p class="mb-4">
+                    No Sermão da Montanha, Jesus eleva o preceito decalogal <em>"Não matarás"</em> (Ex 20, 13) à sua plenitude interior. A Lei Antiga punia a execução física da violência, mas Nosso Senhor desmascara a raiz oculta do pecado:
+                </p>
+
+                <!-- Scripture Quote Box -->
+                <blockquote class="my-6 p-6 bg-walnut-900 text-papyrus-100 rounded-xl border border-gold-500/40 relative font-serif text-lg sm:text-xl italic shadow-md">
+                    <i data-lucide="quote" class="w-8 h-8 text-gold-500/20 absolute top-3 right-3"></i>
+                    "Pois eu digo-vos que todo aquele que se irar contra seu irmão, será condenado em juízo. E o que chamar raca a seu irmão será condenado no Conselho. E o que lhe chamar louco, será condenado ao fogo da geena."
+                    <cite class="block text-right font-sans not-italic text-xs text-gold-300 uppercase tracking-widest mt-3 font-semibold">
+                        — Mt 5, 22 (Trad. Pe. Matos Soares)
+                    </cite>
+                </blockquote>
+
+                <p class="mb-4">
+                    A Tradição da Igreja ensina que o homicídio não começa no derramamento de sangue, mas no afeto desordenado do coração. A Didaquê (Instrução dos Doze Apóstolos, 3, 2) adverte: <em>"Não sejas colérico, porque a ira conduz ao homicídio"</em>. E São João Evangelista sintetiza com rigor implacável: <em>"Todo o que tem ódio a seu irmão é um homicida"</em> (1Jo 3, 15).
+                </p>
+                <p>
+                    Chamar o irmão de 'raca' (ser sem valor) ou 'louco' significa 'deletar' a sua dignidade no mundo afetivo do orante, perpetrando um verdadeiro assassinato espiritual.
+                </p>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    4. A Auto-Aniquilação da Alma Irada
+                </h3>
+                <p class="mb-4">
+                    A suprema tragédia da ira reside na sua contradição interna: ao tentar destruir o próximo, o irado destrói, em primeiro lugar, a si mesmo. O Catecismo Romano, citando São João Crisóstomo, ensina que o homem que alimenta rancor imagina ferir o seu adversário, mas inflige o golpe mais mortal contra a própria consciência. Ao expulsar a caridade para dar lugar ao ódio, a alma perde o estado de graça santificante, extingue em si a presença do Espírito Santo e entrega-se à servidão do Maligno.
+                </p>
+                <p>
+                    Como recomenda São Francisco de Sales na <em>Introdução à Vida Devota</em> (III, 8), a alma deve fechar imediatamente as portas à ira, por mais 'justa' que pareça, pois ela lança raízes profundas e transforma-se rapidamente em ódio incorrigível. A dor da reconciliação imediata é o único remédio eficaz para estancar o veneno da cólera.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-walnut-950 border-b border-papyrus-300 pb-2 mb-4 tracking-wide uppercase">
+                    5. A Soberana Justiça de Cristo: Amor aos Inimigos e Restauração
+                </h3>
+                <p class="mb-4">
+                    A resposta evangélica à ira não é a passividade cobarde, mas a vitória do bem sobre o mal mediante o amor ativo (Rm 12, 21). Jesus exige a reconciliação urgente: se diante do altar nos lembrarmos de que o irmão tem algo contra nós, devemos primeiro ir reconciliar-nos com ele (Mt 5, 23-24). Na Cruz, ao clamar <em>"Pai, perdoai-lhes, pois não sabem o que fazem"</em> (Lc 23, 34), Cristo inaugurou a justiça da Nova Aliança, onde a misericórdia vence o juízo e a Graça restaura a vida da alma.
+                </p>
+
+                <!-- Highlight Box for Synthesis -->
+                <div class="my-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-gold-100 via-papyrus-100 to-papyrus-200 border-2 border-gold-500/50 shadow-md">
+                    <span class="font-display text-xs uppercase tracking-[0.2em] font-bold text-gold-700 block mb-3">
+                        Síntese da Conclusão Teológica
+                    </span>
+                    <p class="font-serif text-xl sm:text-2xl font-bold text-walnut-950 italic leading-relaxed">
+                        "A ira humana fala em nome da justiça, mas produz a morte e a divisão; a Graça de Cristo fala em nome da misericórdia e restaura a vida eterna. O verdadeiro discípulo de Cristo reconhece que a vida humana é sagrada e que o perdão das ofensas não é uma fraqueza moral, mas a expressão suprema da fortaleza cristã e da participação na vida da Trindade."
+                    </p>
+                </div>
+            </section>
+
+            <div class="border-t-2 border-gold-500/30 pt-8 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4 bg-papyrus-100/60 p-6 rounded-xl">
+                <div class="flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-full bg-walnut-900 border-2 border-gold-500 flex items-center justify-center text-gold-400 font-display font-bold text-xl shadow-md">
+                        KF
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-xl text-walnut-950">K.F. Souza</h4>
+                        <p class="text-xs font-sans text-walnut-700 font-medium">Pesquisador e Analista de Teologia Católica</p>
+                    </div>
+                </div>
+                
+                <button onclick="copyCitation()" class="no-print text-xs font-sans font-semibold text-walnut-900 hover:text-gold-700 bg-papyrus-200 hover:bg-papyrus-300 px-4 py-2.5 rounded-lg border border-papyrus-300 transition-colors flex items-center shadow-sm">
+                    <i data-lucide="copy" class="w-3.5 h-3.5 mr-1.5"></i>
+                    Copiar Citação ABNT
+                </button>
+            </div>
+
+            <section class="border-t border-papyrus-300 pt-8">
+                <h3 class="font-display text-sm uppercase tracking-[0.2em] font-bold text-gold-700 mb-4 flex items-center">
+                    <i data-lucide="library" class="w-4 h-4 mr-2"></i>
+                    Referências Bibliográficas e Fontes Doutrinárias
+                </h3>
+
+                <ul class="space-y-3 font-sans text-sm text-walnut-800 list-disc list-inside leading-relaxed">
+                    <li>
+                        <strong>BÍBLIA SAGRADA.</strong> Traduzida da Vulgata e comentada pelo Pe. Matos Soares. Edições Paulinas / Tipografia do Porto.
+                    </li>
+                    <li>
+                        <strong>CATECISMO DA IGREJA CATÓLICA.</strong> Edição Típica do Vaticano. Edições Loyola, 2000 (nn. 2258-2262, 2302-2303).
+                    </li>
+                    <li>
+                        <strong>CATECISMO ROMANO.</strong> Promulgado pelo Papa São Pio V. Edição do Serviço de Animação Eucarística Mariana (Parte III, Cap. VI).
+                    </li>
+                    <li>
+                        <strong>DIDAQUÊ (A Instrução dos Doze Apóstolos).</strong> Seção 'Os Dois Caminhos' (Cap. 3 e 5).
+                    </li>
+                    <li>
+                        <strong>SÃO FRANCISCO DE SALES.</strong> <em>Introdução à Vida Devota.</em> Edições Vozes (Parte III, Cap. 8: A Mansidão).
+                    </li>
+                    <li>
+                        <strong>SÃO TOMÁS DE AQUINO.</strong> <em>Suma Teológica</em> (II-II, q. 158: Da Iracúndia; I-II, qq. 46-48: Da Ira).
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gold-300 no-print px-2">
+            <a href="../index.html#artigos" class="flex items-center text-gold-400 hover:text-gold-200 transition-colors font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>
+                Voltar para o Repositório de Artigos
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center hover:text-gold-100 transition-colors">
+                    <i data-lucide="arrow-up" class="w-4 h-4 mr-1"></i>
+                    Voltar ao Topo
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-walnut-900 border-t border-gold-500/20 py-12 mt-auto no-print">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-full bg-walnut-800 p-1 border border-gold-500/30 flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gold-500 fill-current">
+                        <use href="#goldGradNav"></use>
+                        <path d="M50 85 C48 65 40 55 35 45 C30 35 38 25 45 23 C48 18 52 18 55 23 C62 25 70 35 65 45 C60 55 52 65 50 85 Z" fill="url(#goldGradNav)"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-gold-400 block text-sm">FIGUEIRA DIGITAL</span>
+                    <span class="text-[10px] text-gray-500">Cultura, Teologia &amp; Oração</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-400 text-center md:text-right max-w-md leading-relaxed">
+                "Cava a terra e lança o adubo." — Projeto autoral voltado para a difusão da Teologia Católica e da espiritualidade clássica na era digital.
+            </p>
+
+        </div>
+    </footer>
+
+    <script>
+        // Interactive font resizing
+        let currentSizeLevel = 0;
+        
+        function changeFontSize(delta) {
+            const article = document.getElementById('article-content');
+            if (!article) return;
+
+            currentSizeLevel += delta;
+            if (currentSizeLevel < -1) currentSizeLevel = -1;
+            if (currentSizeLevel > 2) currentSizeLevel = 2;
+
+            // Remove existing text scale overrides
+            article.classList.remove('text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl');
+
+            if (currentSizeLevel === -1) {
+                article.classList.add('text-base');
+            } else if (currentSizeLevel === 0) {
+                article.classList.add('text-lg', 'sm:text-xl');
+            } else if (currentSizeLevel === 1) {
+                article.classList.add('text-xl', 'sm:text-2xl');
+            } else if (currentSizeLevel === 2) {
+                article.classList.add('text-2xl', 'sm:text-3xl');
+            }
+        }
+
+        function resetFontSize() {
+            currentSizeLevel = 0;
+            const article = document.getElementById('article-content');
+            if (article) {
+                article.classList.remove('text-base', 'text-xl', 'text-2xl', 'text-3xl');
+                article.classList.add('text-lg', 'sm:text-xl');
+            }
+        }
+
+        // Copy ABNT citation to clipboard
+        function copyCitation() {
+            const citationText = "SOUZA, K. F. A Anatomia Espiritual da Ira e o Homicídio do Coração: Análise Exegética e Teológico-Moral à Luz do Sermão da Montanha e da Tradição Católica. Estudo Teológico e Síntese Doutrinária. Figueira Digital: Série Raízes, 2026.";
+            
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = citationText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            // Subtle user notification message box
+            const btn = event.currentTarget;
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 mr-1.5 text-green-700"></i> Copiado com Sucesso!`;
+            if (window.lucide) lucide.createIcons();
+
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                if (window.lucide) lucide.createIcons();
+            }, 3000);
+        }
+
+        // Initialize Lucide icons on load
+        window.onload = function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        };
+    </script>
+</body>
+</html>
